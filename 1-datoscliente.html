@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<script>
+  //la página inicial habilita todos los Botones
+  window.parent.habilitaTodo();
+
+</script>
+<body>
+
+<div class="container">
+  <h1>datos de cliente</h1>
+  <form action="2-infoadicional.html">
+
+
+    <br><br>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae vitae quam iste harum quisquam. Enim aliquam, reprehenderit explicabo, perferendis, vel necessitatibus mollitia maiores est voluptatibus, hic cupiditate similique fugit repellendus!</p>
+
+      <button type="submit" class="btn btn-primary">siguiente</button>
+
+  </form>
+</div>
+<script>
+//create object
+var data = [];
+var art1 = {
+   "artist" : "pepe",    //your artist variable
+   "song_name" : "letitbe"   //your title variable
+};
+//push the object to your array
+data.push( art1 );
+var art2 = {
+   "artist" : "juan",    //your artist variable
+   "song_name" : "imagine"   //your title variable
+};
+data.push( art2 );
+let texto2 = JSON.stringify(data);
+window.parent.document.getElementById("datos").value = texto2;
+  /*let texto =  '{"clientes":[' +
+      '{"firstName":"John","lastName":"Doe" },' +
+      '{"firstName":"Peter","lastName":"Jones" }]}';
+  const obj = JSON.parse(texto);
+
+  //let newObj = JSON.push('{"firstName":"Pepe","lastName":"Fernandez" }' );
+  let texto2 = JSON.stringify(obj);
+  window.parent.document.getElementById("datos").value = texto2;*/
+    /*obj.clientes[0].firstName + " " + obj.clientes[0].lastName;*/
+
+
+</script>
+</body>
+</html>
